@@ -64,3 +64,8 @@ img {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+/* Classe para o efeito de destaque via JavaScript */
+.sombra-vermelha {
+    box-shadow: 0 0 15px red;
+}
