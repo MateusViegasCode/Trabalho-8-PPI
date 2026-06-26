@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1 - Interesses</title>
+</head>
+
+<body>
+    <label for="interesse">Interesse:</label>
+    <input type="text" id="interesse">
+    <button id="btnAdicionar">Adicionar</button>
+
+    <ol id="listaInteresses">
+    </ol>
+
+    <script>
+        // Capturamos as referências dos elementos no HTML
+        const inputInteresse = document.getElementById('interesse');
+        const btnAdicionar = document.getElementById('btnAdicionar');
+        const listaInteresses = document.getElementById('listaInteresses');
+
+        // Adicionamos o evento de clique no botão
+        btnAdicionar.addEventListener('click', function () {
+            // Pegamos o texto digitado pelo usuário
+            const texto = inputInteresse.value;
+
+            // Verificamos se o campo não está vazio
+            if (texto.trim() !== '') {
+                // Criamos um novo elemento de lista <li>
+                const novoItem = document.createElement('li');
+
+                // Inserimos o texto digitado dentro do <li>
+                novoItem.textContent = texto;
+
+                // Adicionamos o novo <li> na lista <ol>
+                listaInteresses.appendChild(novoItem);
+
+                // Limpamos o campo de texto após adicionar (boa prática)
+                inputInteresse.value = '';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Estados</title>
+</head>
+
+<body>
+    <label for="estados">Selecione uma opção:</label>
+    <select id="estados">
+        <option value="">Selecione...</option>
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="RJ">Rio de Janeiro</option>
+    </select>
+
+    <p id="mensagemEstado"></p>
+
+    <script>
+        const selectEstados = document.getElementById('estados');
+        const mensagemEstado = document.getElementById('mensagemEstado');
+
+        // Utilizamos o evento 'change' conforme a dica [cite: 42]
+        selectEstados.addEventListener('change', function () {
+            // Resgatamos o valor da opção selecionada [cite: 43]
+            const valorSelecionado = this.value;
+
+            // Atualizamos o texto do parágrafo
+            if (valorSelecionado !== "") {
+                mensagemEstado.textContent = "Você selecionou: " + valorSelecionado;
+            } else {
+                mensagemEstado.textContent = "";
+            }
+        });
+    </script>
+</body>
+
+</html>

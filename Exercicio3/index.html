@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Conheça a infraestrutura moderna da Clínica ABC Health.">
+    <title>Galeria - Clínica ABC Health</title>
+    <link rel="stylesheet" href="galeria.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Clínica ABC Health</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="index.html">Nossos Valores</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Nossa Estrutura</h2>
+            <table>
+                <tr>
+                    <td><img src="imagens/foto1.jpg" alt="Consultório 1"></td>
+                    <td><img src="imagens/foto2.jpg" alt="Consultório 2"></td>
+                    <td><img src="imagens/foto3.jpg" alt="Recepção"></td>
+                    <td><img src="imagens/foto4.jpg" alt="Fachada"></td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/foto5.jpg" alt="Sala de Espera"></td>
+                    <td><img src="imagens/foto6.jpg" alt="Equipamentos"></td>
+                    <td><img src="imagens/foto7.jpg" alt="Laboratório"></td>
+                    <td><img src="imagens/foto8.jpg" alt="Equipe"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Conheça mais sobre nós</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dq0rJWwk5O8"
+                title="Rede Ideal -- Clínica Médica" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>Av. João Naves de Avila, Santa Mônica, Uberlândia</p>
+    </footer>
+
+    <script>
+        // Seleciona todas as imagens dentro da seção da galeria
+        const imagens = document.querySelectorAll('main table img');
+
+        // Adiciona os eventos para cada imagem
+        for (let i = 0; i < imagens.length; i++) {
+            // Quando o ponteiro do mouse passar sobre a imagem [cite: 46]
+            imagens[i].addEventListener('mouseover', function () {
+                this.classList.add('sombra-vermelha');
+            });
+
+            // Quando o ponteiro do mouse se afastar da imagem [cite: 47]
+            imagens[i].addEventListener('mouseout', function () {
+                this.classList.remove('sombra-vermelha');
+            });
+        }
+    </script>
+</body>
+
+</html>

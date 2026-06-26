@@ -1,0 +1,56 @@
+body {
+    background-color: #ddd;
+    font-family: Helvetica;
+    color: #444;
+    line-height: 1.5;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: rgb(140, 76, 8);
+}
+
+section h2+p {
+    text-indent: 2rem;
+}
+
+#experiencia li {
+    font-weight: bold;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: rgb(140, 76, 8);
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 0px;
+    padding-bottom: 5px;
+    border-top: solid 1px gray;
+}
+
+h2 {
+    color: rgb(140, 76, 8);
+    user-select: none;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}

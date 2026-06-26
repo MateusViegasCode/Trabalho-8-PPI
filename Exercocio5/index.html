@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo de Mateus Alves Viegas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <img src="images/avatar.png" alt="Avatar do Mateus" width="120" height="120">
+        <h1>Mateus Alves Viegas</h1>
+
+        <section>
+            <h2>Perfil</h2>
+            <p>Estudante de tecnologia apaixonado por resolver problemas complexos através de código. Tenho grande
+                interesse no desenvolvimento de aplicações web e na construção de interfaces acessíveis e amigáveis para
+                o usuário. Busco sempre aprender novas ferramentas e boas práticas de engenharia de software.</p>
+            <p>Atualmente, dedico meu tempo livre a projetos pessoais e maratonas de programação. Sou comunicativo,
+                gosto de trabalhar em equipe e acredito que a tecnologia é a melhor ferramenta para transformar a
+                sociedade de forma positiva.</p>
+        </section>
+
+        <section>
+            <h2>Principais Competências</h2>
+            <ul>
+                <li>Programador C#</li>
+                <li>Desenvolvimento Front-End</li>
+                <li>Administração de Banco de Dados</li>
+                <li>Análise de Requisitos</li>
+                <li>Gestão de Projetos Ágeis</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Formação Acadêmica</h2>
+            <p>Graduação em Ciência da Computação pela <a href="https://ufu.br">Universidade Federal de Uberlândia</a>
+                (Previsão de Conclusão: 2028)</p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <ol>
+                <li>Museu da Computação (2025 - Presente)</li>
+                <li>Empresa Júnior ASCII - Soluções em Tecnologia (2025 - Presente)</li>
+            </ol>
+            <a href="experiencia.html">Veja as experiências profissinais em detalhes</a>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+            <address>
+                <img src="images/location.png" alt="Ícone de Endereço" width="30" height="30"> João Naves de Ávila,
+                Santa Mônica, Uberlândia
+                <img src="images/phone.png" alt="Ícone de Telefone" width="30" height="30"> (34) 9999-9999
+                <img src="images/email.png" alt="Ícone de E-mail" width="30" height="30"> fulano@mail.com
+            </address>
+        </section>
+    </main>
+
+    </main>
+
+    <script>
+        // Seleciona todos os subtítulos h2
+        const subtitulos = document.querySelectorAll('h2');
+
+        for (let i = 0; i < subtitulos.length; i++) {
+
+            // Clique simples para ocultar o próximo elemento 
+            subtitulos[i].addEventListener('click', function () {
+                // Acessa o elemento seguinte ao clicado [cite: 79]
+                const proximoElemento = this.nextElementSibling;
+
+                if (proximoElemento) {
+                    // Adiciona a classe que aplica o display: none [cite: 80]
+                    proximoElemento.classList.add('oculto');
+                }
+            });
+
+            // Clique duplo para fazer o elemento reaparecer 
+            // Captura o duplo clique com 'dblclick' [cite: 81]
+            subtitulos[i].addEventListener('dblclick', function () {
+                const proximoElemento = this.nextElementSibling;
+
+                if (proximoElemento) {
+                    // Remove a classe para mostrar o conteúdo novamente [cite: 82]
+                    proximoElemento.classList.remove('oculto');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

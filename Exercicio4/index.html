@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Cadastro de Usuário</h2>
+    <form id="formCadastro">
+        <div>
+            <label for="usuario">Usuário:</label><br>
+            <input type="text" id="usuario">
+            <p class="erro oculto" id="erroUsuario">O usuário deve ser preenchido</p>
+        </div>
+
+        <div>
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha">
+            <p class="erro oculto" id="erroSenha">A senha deve ser preenchida</p>
+        </div>
+
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email">
+            <p class="erro oculto" id="erroEmail">O email deve ser preenchido</p>
+        </div>
+
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('formCadastro');
+
+        // Adiciona evento no envio do formulário
+        form.addEventListener('submit', function (evento) {
+            let formValido = true;
+
+            // Captura os campos e as mensagens de erro
+            const usuario = document.getElementById('usuario');
+            const erroUsuario = document.getElementById('erroUsuario');
+
+            const senha = document.getElementById('senha');
+            const erroSenha = document.getElementById('erroSenha');
+
+            const email = document.getElementById('email');
+            const erroEmail = document.getElementById('erroEmail');
+
+            // Verifica o usuário
+            if (usuario.value.trim() === "") {
+                erroUsuario.classList.remove('oculto'); // Mostra o erro
+                formValido = false;
+            } else {
+                erroUsuario.classList.add('oculto'); // Oculta o erro
+            }
+
+            // Verifica a senha
+            if (senha.value.trim() === "") {
+                erroSenha.classList.remove('oculto');
+                formValido = false;
+            } else {
+                erroSenha.classList.add('oculto');
+            }
+
+            // Verifica o email
+            if (email.value.trim() === "") {
+                erroEmail.classList.remove('oculto');
+                formValido = false;
+            } else {
+                erroEmail.classList.add('oculto');
+            }
+
+            // Se algum campo estiver vazio, impede o envio do formulário
+            if (!formValido) {
+                evento.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
